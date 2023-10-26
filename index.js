@@ -8,8 +8,10 @@ function ucFirstLetters(city) {
 
 console.log(ucFirstLetters("los angeles") ) //Los Angeles
 
-// Remember to break down the problem into smaller parts.
-// 1.) Create a function
-// 2.) Have the function take a string as the parameter
-// 3.) Return the string with the first letter of each word capitalized. (edited) 
 
+/* Using the the replace method with the expression (/(^| )./g) the function is taking
+2 arguments -
+First one is  (/(^| )./g) - This arguement is setting the boundries for the function that we want the
+first caharcter of a string.
+
+Second aregument uses an arrow funciton that takes x and processes each substring*/ 
