@@ -32,7 +32,7 @@ console.log(animals.sort());
 //part d: Write a function replaceMiddleAnimal(newValue) that replaces the value in the
 // middle of the animals array with newValue
 function replaceMiddleAnimal(newValue) {
-    animals.splice(2, newValue);
+    animals.splice(2, 1, newValue);
     return animals;
 }
 
