@@ -4,6 +4,11 @@
 // b) Write another variant of the truncate function that uses a conditional operator.
 
 function truncate(str,max) {
+    if (str.length>max) {  
+        return str.slice(0, max) + "...";  
+        } else {  
+        return str;  
+        }  
 
 }
 
