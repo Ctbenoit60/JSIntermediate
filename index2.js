@@ -3,6 +3,9 @@
 // ellipsis (...) added to the end if it was too long, or the original text otherwise.
 // b) Write another variant of the truncate function that uses a conditional operator.
 
+
+// part a: reate a function truncate(str, max) that truncates a given string of text if its total
+// length is greater than the max length.
 function truncate(str,max) {
     if (str.length>max) {  
         return str.slice(0, max) + "...";  
@@ -12,6 +15,7 @@ function truncate(str,max) {
 
 }
 
+// b) Write another variant of the truncate function that uses a conditional operator.
 function otherTruncate(str,max) {
     if (str.length >= max) {
         return str.slice(0, max) + "...";
@@ -19,6 +23,7 @@ function otherTruncate(str,max) {
         return str;
     }
 }
+
 function length(string) {
     return string.slice(' ').length;
 }
