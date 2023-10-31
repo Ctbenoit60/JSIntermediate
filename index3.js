@@ -21,7 +21,19 @@ const addAnimals = animals.push('Lion', 'Bears')
 console.log(addAnimals)
 console.log(animals);
 
-//b) part b: Add 2 new values to the beginning using the unshift method
+//part b: Add 2 new values to the beginning using the unshift method
 const addMoreAnimals = animals.unshift('Tin Man', 'Scarecow')
 console.log(addMoreAnimals)
 console.log(animals);
+
+//part c: Sort the values alphabetically
+console.log(animals.sort());
+
+//part d: Write a function replaceMiddleAnimal(newValue) that replaces the value in the
+// middle of the animals array with newValue
+function replaceMiddleAnimal(newValue) {
+    animals.splice(2, newValue);
+    return animals;
+}
+
+console.log(replaceMiddleAnimal('Cheetah'));
