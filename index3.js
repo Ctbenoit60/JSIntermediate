@@ -37,3 +37,19 @@ function replaceMiddleAnimal(newValue) {
 }
 
 console.log(replaceMiddleAnimal('Cheetah'));
+
+//part e: Write a function findMatchingAnimals(beginsWith) that returns a new array
+// containing all the animals that begin with the beginsWith string. Try to make it work
+// regardless of upper/lower case.
+
+function findMatchingAnimals(beginsWith, animalArray) {
+    beginsWith = beginsWith.toLowerCase();
+  
+    return animalArray.filter(animal => animal.toLowerCase().startsWith(beginsWith));
+  }
+
+  
+  const beginsWith = 't'; 
+  
+  const matchingAnimals = findMatchingAnimals(beginsWith, animals);
+  console.log(matchingAnimals);
