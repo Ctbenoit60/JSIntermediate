@@ -20,8 +20,10 @@ console.log(fixedTwenty)
 // decimal numbers float1 and float2 and returns the correct float result.
 
 function currencyAddition(float1, float2) {
-    
+    console.log(`${float1 + float2}`)
 }
+
+currencyAddition(0.2,0.1)
 
 // c) Create a function currencyOperation(float1, float2, operation) which
 // safely performs the given operation (either +, -, / or *) on the two numbers and return
