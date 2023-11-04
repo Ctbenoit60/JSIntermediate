@@ -20,7 +20,8 @@ console.log(fixedTwenty)
 // decimal numbers float1 and float2 and returns the correct float result.
 
 function currencyAddition(float1, float2) {
-    console.log(`${float1 + float2}`)
+    const Bob = float1 + float2;
+    console.log(Bob.toFixed(2))
 }
 
 currencyAddition(0.2,0.1)
@@ -30,10 +31,57 @@ currencyAddition(0.2,0.1)
 // the correct float result. https://developer.mozilla.org/en-
 // US/docs/Web/JavaScript/Reference/Statements/switch may be useful.
 
+function currencyOperation(float1, float2, operation) {
+    switch(operation) {
+        case "+":
+            return float1 + float2;
+        case "-":
+            return float1 - float2;
+        case "*":
+            return float1 * float2;
+        case "/":
+            return float1 / float2;
+        default:
+            console.log("Invalid operation");
+            return null;
+    }
+}
+
+const result = currencyOperation(1, 2, "+");
+console.log(result);
+
 // d) (Extension) Extend the above function to include a fourth argument numDecimals
 // which allows the operation to support different amounts of decimal places from 1 to 10.
 // HINT: Assume 2 decimal places for b) and c) and use a multiplication factor. Test with
 // different values as well as the below:
 
-// console.log(0.3 == currencyAddition(0.1, 0.2)) // true
-// console.log(0.3 == currencyOperation(0.1, 0.2, '+')) // true
+function currencyOperation(float1, float2, operation,numDecimals) {
+
+    if  (numDecimals < 1 || numDecimals > 10) {
+        console.log("To many decimals");
+        return null;
+    }
+
+    switch(operation) {
+        case "+":
+            return (float1 + float2).toFixed(numDecimals);
+        case "-":
+            return (float1 - float2).toFixed(numDecimals);
+        case "*":
+            return (float1 * float2).toFixed(numDecimals);
+        case "/":
+            return (float1 / float2).toFixed(numDecimals);
+        default:
+            console.log("Invalid operation");
+            return null;
+    }
+
+}
+
+const result2 = currencyOperation(1.003, 2.34, "*",4);
+console.log(result2);
+
+const result3 = currencyOperation(10, 3, "/", 1);
+console.log(result3);
+
+const result4 = currencyOperation(5, 3, "+", 11); 
