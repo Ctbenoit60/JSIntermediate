@@ -9,6 +9,22 @@ const books = [
 ];
 // a) Write a function getBookTitle(bookId) that uses the find function to return the
 // title of the book object with the matching id.
+
+function getBookTitle(bookId) {
+   let book = books.find(books => books.id === bookId);
+   if (book) {
+    return book.title;
+   } else {
+     console.log('Not in our Library');
+     return null
+   }
+}
+
+getBookTitle(2);
+
+
+// return the title of whatever the bookId is 
+
 // b) Write a function getOldBooks() that uses the filter function to return all book
 // objects written before 1950.
 // c) Write a function addGenre() that uses the map function to add a new genre property
