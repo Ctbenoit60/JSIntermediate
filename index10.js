@@ -2,19 +2,19 @@
 // that have passed today so far. Extend the code to do the following:
 
 const today = new Date();
-console.log('Current time is ' + today.toLocaleTimeString())
-console.log(today.getHours() + ' hours have passed so far today')
+console.log("Current time is " + today.toLocaleTimeString());
+console.log(today.getHours() + " hours have passed so far today");
 
 // a) Print the total number of minutes that have passed so far today
 const totalMinutes = today.getHours() * 60 + today.getMinutes();
-console.log(totalMinutes + ' minutes have passed so far today');
+console.log(totalMinutes + " minutes have passed so far today");
 
 // b) Print the total number of seconds that have passed so far today
 const totalSeconds = totalMinutes * 60 + today.getSeconds();
-console.log(totalSeconds + ' seconds have passed so far today');
+console.log(totalSeconds + " seconds have passed so far today");
 
 // c) Calculate and print your age as: 'I am x years, y months and z days old'
-const birthDate = new Date('1993-06-01'); // Replace 'Your Birth Date Here' with your actual birth date
+const birthDate = new Date("1993-06-01"); // Replace 'Your Birth Date Here' with your actual birth date
 const ageInMilliseconds = today - birthDate;
 const ageInSeconds = ageInMilliseconds / 1000;
 const ageInMinutes = ageInSeconds / 60;
@@ -35,7 +35,7 @@ function daysInBetween(date1, date2) {
   return daysDifference;
 }
 
-const date1 = new Date('1993-06-01');
-const date2 = new Date('2023-12-31');
+const date1 = new Date("1993-06-01");
+const date2 = new Date("2023-12-31");
 const daysBetween = daysInBetween(date1, date2);
 console.log(`Days between date1 and date2: ${daysBetween}`);
