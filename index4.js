@@ -46,6 +46,26 @@ function mooseCase(cssProp) {
   return dog;
 }
 
-console.log(mooseCase("margin-left")); // marginLeft
-console.log(mooseCase("background-image")); // backgroundImage
-console.log(mooseCase("display")); // display
+function cowCase(cssProp) {
+  const corgi = cssProp.split("-");
+  // let string ='';
+  let dog = corgi[0];
+  if (corgi.length === 1) {
+    return cssProp;
+  }
+  for (let i = 0; i < corgi.length; i++) {
+    // if (i != 0) {
+    //   dog = dog + corgi[i][0].toUpperCase() + corgi[i].substring(1);
+    // }
+    // teranary takes in 3 differnt parts 1) the (expression) 2) if the expression is true ? 3) if expression is false :
+    dog = (i !== 0) ? dog + corgi[i][0].toUpperCase() + corgi[i].substring(1) : dog;
+    // else if index = 0 then print cssProp
+  }
+  return dog;
+}
+
+console.log(cowCase("margin-left")); // marginLeft
+console.log(cowCase("background-image")); // backgroundImage
+console.log(cowCase("display")); // display
+console.log(cowCase('margin-right-center')); //marginRightCenter
+console.log(cowCase('left-right-down-up')); //leftRightDownUp
