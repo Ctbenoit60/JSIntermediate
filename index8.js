@@ -35,5 +35,33 @@ console.log(phoneBookABC);
 
 // d) Write a function printPhoneBook(contacts) that prints the names and phone
 // numbers in the given Map
+
+function printPhoneBook(contacts) {
+    for (let [name, phoneNumber] of contacts) {
+      console.log(`${name}: ${phoneNumber}`);
+    }
+  }
+  
+  printPhoneBook(phoneBookABC);
+  printPhoneBook(phoneBookDEF);
+  
+
+
 // e) Combine the contents of the two individual Maps into a single phoneBook Map
+
+const phoneBook = new Map(phoneBookABC); 
+
+for (let [name, phoneNumber] of phoneBookDEF) {
+  phoneBook.set(name, phoneNumber); 
+}
+
+console.log(phoneBook);
+
+
 // f) Print out the full list of names in the combined phone book
+
+for (let name of phoneBook.keys()) {
+    console.log(name);
+  }
+
+  
